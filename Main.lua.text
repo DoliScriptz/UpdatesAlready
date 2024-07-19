@@ -1,0 +1,47 @@
+-- creating the main GUI
+local screenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local forceAcceptButton = Instance.new("TextButton")
+local lagButton = Instance.new("TextButton")
+
+-- function to create white outline
+local function addOutline(instance)
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Parent = instance
+uiStroke.Thickness = 2
+uiStroke.Color = Color3.fromRGB(255, 255, 255)
+end
+
+-- setting properties for the screenGui
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- setting properties for the frame
+frame.Parent = screenGui
+frame.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+frame.Size = UDim2.new(0, 300, 0, 200)
+frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+addOutline(frame)
+
+-- setting properties for the forceAcceptButton
+forceAcceptButton.Parent = frame
+forceAcceptButton.Text = "Force accept"
+forceAcceptButton.Size = UDim2.new(0, 200, 0, 50)
+forceAcceptButton.Position = UDim2.new(0.5, -100, 0.5, -55)
+forceAcceptButton.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+forceAcceptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+forceAcceptButton.Font = Enum.Font.SourceSans
+forceAcceptButton.TextSize = 20
+forceAcceptButton.AutoButtonColor = false
+addOutline(forceAcceptButton)
+
+-- setting properties for the lagButton
+lagButton.Parent = frame
+lagButton.Text = "Lag"
+lagButton.Size = UDim2.new(0, 200, 0, 50)
+lagButton.Position = UDim2.new(0.5, -100, 0.5, 15)
+lagButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+lagButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+lagButton.Font = Enum.Font.SourceSans
+lagButton.TextSize = 20
+lagButton.AutoButtonColor = false
+addOutline(lagButton)
